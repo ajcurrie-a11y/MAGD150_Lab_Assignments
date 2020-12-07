@@ -1,0 +1,24 @@
+var videoCapture;
+
+function setup() {
+  createCanvas(400, 400);
+  
+  videoCapture = createCapture(VIDEO);
+  videoCapture.hide();
+}
+
+function draw() {
+  background(0, 0, 0);
+  
+  image(videoCapture, 50, 87, 300, 225);
+  filter(INVERT);
+  
+  for (let x = 100; x < 350; x += 300 / 6) {
+    
+    push();
+    strokeCap(SQUARE);
+    strokeWeight(15);
+    line(x, 87, x, 312);
+    pop();
+  }
+}
