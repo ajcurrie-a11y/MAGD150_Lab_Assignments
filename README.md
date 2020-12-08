@@ -8,21 +8,21 @@ My best work from MAGD150.
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab09_currie/sketch.js)
 
 
-lab 7
+##Competing Flowers
 
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab07_currie/sketch.js)
 
 
-lab 6
+##Rock Field
 
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab06_currie/sketch.js)
 
 
-lab 5
+##Analog TV Lab
 
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab05_currie/sketch.js)
 
 
-lab 2
+##Viewed From Above
 
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab02_currie/sketch.js)
