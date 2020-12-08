@@ -25,35 +25,6 @@ Program uses *p5.sound.js* library in order to work with sound effects.
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab09_currie/sketch.js)  
 
 
-
-
-
-
-
-
-
-
-
-
-## Competing Flowers
-
-
-### Description:
-
-  At the very beginning of the program, the *flowers* array is to hold all of the flower objects which will be created. The *nutrientSupply* variable tells how large the supply of nutrients for the garden as a whole is.  
-  
-  The *drawPetal()* function draws petals with their tip at (*x*, *y*), angled at angle 'angle' relative to a horizontal line and incrementing in a counterclockwise fashion. The coordinate system is first translated so that the origin will lie at the flower's center, then the coordinate system is rotated so that the petal will be drawn at the proper angle.  
-  
-  The Flower class represents a flower based off of its position, number of petals, the colors of both its center part and its petals, as well as the mechanical properties: the rate at which it grows bigger and the maximum size which it can grow to. The constructor for the class automatically adds new Flower objects to the flower array, either at an empty index or at the end of the array. The class has a function to simulate a flowers' growth for a frame, to draw them onto the canvas, to make them "reproduce" i.e. create 2 identical copies of themselves nearby and a function to kill a flower i.e. remove it from the array so that the program will no longer be able to access it to draw or simulate.  
-  
-  In the simulate function, *nutrientSupply* is divided by the total number of flowers in order to determine how much nutrients this flower will get once the available nutrients has been evenly distributed. If the amount of nutrients is sufficient for the flower's *growthRate* and it still has room to grow before reaching its maximum size, the plant's size is increased by its growth rate. Since *size* represents the radius of flowers and is increasing at a linear rate, the flowers themselves grow at a quadratic rate, With the rate of growth relative to the size decreasing over time. Next, it is determined if the flower has too little nutrients, in which case it is killed. It is then checked whether the flower has enough nutrients to reproduce and is also in excess of its full adult size, in which case it reproduces.  
-  
-  In the keyReleased function implementation, the key codes 66, 83 and 71 are used to represent the keys 'b', 's' and 'g', respectively. The *keyCode* variable (which belongs to p5js) is compared to each numeric code and the program instantiates the flower type which matches the key pressed by the user (as described in the instructions).  
-
-
-[Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab07_currie/sketch.js)  
-
-
 ## Rock Field
 
 
@@ -75,6 +46,25 @@ Program uses *p5.sound.js* library in order to work with sound effects.
 
 
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab06_currie/sketch.js)  
+
+
+## Competing Flowers
+
+
+### Description:
+
+  At the very beginning of the program, the *flowers* array is to hold all of the flower objects which will be created. The *nutrientSupply* variable tells how large the supply of nutrients for the garden as a whole is.  
+  
+  The *drawPetal()* function draws petals with their tip at (*x*, *y*), angled at angle 'angle' relative to a horizontal line and incrementing in a counterclockwise fashion. The coordinate system is first translated so that the origin will lie at the flower's center, then the coordinate system is rotated so that the petal will be drawn at the proper angle.  
+  
+  The Flower class represents a flower based off of its position, number of petals, the colors of both its center part and its petals, as well as the mechanical properties: the rate at which it grows bigger and the maximum size which it can grow to. The constructor for the class automatically adds new Flower objects to the flower array, either at an empty index or at the end of the array. The class has a function to simulate a flowers' growth for a frame, to draw them onto the canvas, to make them "reproduce" i.e. create 2 identical copies of themselves nearby and a function to kill a flower i.e. remove it from the array so that the program will no longer be able to access it to draw or simulate.  
+  
+  In the simulate function, *nutrientSupply* is divided by the total number of flowers in order to determine how much nutrients this flower will get once the available nutrients has been evenly distributed. If the amount of nutrients is sufficient for the flower's *growthRate* and it still has room to grow before reaching its maximum size, the plant's size is increased by its growth rate. Since *size* represents the radius of flowers and is increasing at a linear rate, the flowers themselves grow at a quadratic rate, With the rate of growth relative to the size decreasing over time. Next, it is determined if the flower has too little nutrients, in which case it is killed. It is then checked whether the flower has enough nutrients to reproduce and is also in excess of its full adult size, in which case it reproduces.  
+  
+  In the keyReleased function implementation, the key codes 66, 83 and 71 are used to represent the keys 'b', 's' and 'g', respectively. The *keyCode* variable (which belongs to p5js) is compared to each numeric code and the program instantiates the flower type which matches the key pressed by the user (as described in the instructions).  
+
+
+[Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab07_currie/sketch.js)  
 
 
 ## Analog TV Lab
