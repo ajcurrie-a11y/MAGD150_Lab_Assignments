@@ -1,5 +1,5 @@
 # MAGD150_Lab_Assignments
-My best work from MAGD150.\s\s
+My best work from MAGD150.
 
 
 
@@ -19,6 +19,14 @@ Program uses *p5.sound.js* library in order to work with sound effects.
 
 
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab09_currie/sketch.js)
+
+
+
+
+
+
+
+
 
 
 
