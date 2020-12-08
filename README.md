@@ -12,8 +12,11 @@ My best work from MAGD150.
 
 Description:
 
-Program uses *p5.sound.js* library in order to work with sound effects. 
-
+Program uses *p5.sound.js* library in order to work with sound effects.  
+  
+  
+  
+  
   In the preload function, the sound is imported into the program from a .wav file using *loadSound()*. The *soundFormats()* function call before this tells the program that the file formats used will be .wav. In the setup function, the program creates an html element as the header of the screen. It then creates a videocapture, and then hides it so that it can be drawn using *image()* instead and be manipulated more specifically. Next, a sawtooth oscillator is created to emulate the sound of sirens.
   In the draw function, a background is first drawn, the color set as black because it will be inverted when *invert()* is called, and then end up blank white. After drawing the frame to hold the mirror, an *image()* function call draws the image and the invert filter inverts it. is placed to creatthe program then draws the bars on to the mirror with a for loop which draws each new bar a fixed distance apart from the last, starting at the left side, until the x-coordinate reaches the right side of the mirror. At the very end of the function implementation, the pop sound is played only if a pseudorandom number between 0 and 60 evaluates out to 1, so that the sound will be played about every 60 frames or 1 second. 
 
