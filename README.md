@@ -11,7 +11,7 @@ Description:
 Program uses *p5.sound.js* library in order to work with sound effects. 
 
   In the preload function, the sound is imported into the program from a .wav file using *loadSound()*. The *soundFormats()* function call before this tells the program that the file formats used will be .wav. In the setup function, the program creates an html element as the header of the screen. It then creates a videocapture, and then hides it so that it can be drawn using *image()* instead and be manipulated more specifically. Next, a sawtooth oscillator is created to emulate the sound of sirens.
-  In the draw function, a background is first drawn, the color set as black because it will be inverted when *invert()* is called, and then end up blank white. After drawing the frame to hold the mirror, an *image()* function call draws the image and the invert filter inverts it. is placed to creatthe program then draws the bars on to the mirror with a for loop which draws each new bar a fixed distance apart from the last, starting at the left side, until the x-coordinate reaches the right side of the mirror. At the very end of the function implementation, the pop sound is played only if a pseudorandom number between 0 and 60 evaluates out to 1, so that the sound will be played about every 60 frames. 
+  In the draw function, a background is first drawn, the color set as black because it will be inverted when *invert()* is called, and then end up blank white. After drawing the frame to hold the mirror, an *image()* function call draws the image and the invert filter inverts it. is placed to creatthe program then draws the bars on to the mirror with a for loop which draws each new bar a fixed distance apart from the last, starting at the left side, until the x-coordinate reaches the right side of the mirror. At the very end of the function implementation, the pop sound is played only if a pseudorandom number between 0 and 60 evaluates out to 1, so that the sound will be played about every 60 frames or 1 second. 
 
 
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab09_currie/sketch.js)
@@ -21,8 +21,11 @@ Program uses *p5.sound.js* library in order to work with sound effects.
 
 ##Competing Flowers
 
+
+Description:
+
   At the very beginning of the program, the *flowers* array is to hold all of the flower objects which will be created. The *nutrientSupply* variable tells how large the supply of nutrients for the garden as a whole is.  
-  The *drawPetal()* function draws petals with their tip at (*x*, *y*), angled at angle 'angle' relative to a horizontal line and incrementing in a counterclockwise fashion. The coordinate system is first translated so that the origin will lie at the flower's center, then the coordinate system is rotated so that the petal will be drawn at the right angle. 
+  The *drawPetal()* function draws petals with their tip at (*x*, *y*), angled at angle 'angle' relative to a horizontal line and incrementing in a counterclockwise fashion. The coordinate system is first translated so that the origin will lie at the flower's center, then the coordinate system is rotated so that the petal will be drawn at the proper angle. 
   The Flower class represents a flower based off of its position, number of petals, the colors of both its center part and its petals, as well as the mechanical properties: the rate at which it grows bigger and the maximum size which it can grow to. The constructor for the class automatically adds new Flower objects to the flower array, either at an empty index or at the end of the array. The class has a function to simulate a flowers' growth for a frame, to draw them onto the canvas, to make them "reproduce" i.e. create 2 identical copies of themselves nearby and a function to kill a flower i.e. remove it from the array so that the program will no longer be able to access it to draw or simulate.
   In the simulate function, *nutrientSupply* is divided by the total number of flowers in order to determine how much nutrients this flower will get once the available nutrients has been evenly distributed. If the amount of nutrients is sufficient for the flower's *growthRate* and it still has room to grow before reaching its maximum size, the plant's size is increased by its growth rate. Since *size* represents the radius of flowers and is increasing at a linear rate, the flowers themselves grow at a quadratic rate, With the rate of growth relative to the size decreasing over time. Next, it is determined if the flower has too little nutrients, in which case it is killed. It is then checked whether the flower has enough nutrients to reproduce and is also in excess of its full adult size, in which case it reproduces.
   In the keyReleased function implementation, the key codes 66, 83 and 71 are used to represent the keys 'b', 's' and 'g', respectively. The *keyCode* variable (which belongs to p5js) is compared to each numeric code and the program instantiates the flower type which matches the key pressed by the user (as described in the instructions).
@@ -33,6 +36,8 @@ Program uses *p5.sound.js* library in order to work with sound effects.
 
 ##Rock Field
 
+
+Description:
 
   *pixelSize* is the base size of one of the large pixels making up the sprites of the images in this program. Rather than updating *pixelSize*, the different sizes of rocks are created with *scale()* transformation functions. *playerChangeX* is the change in x (positive or negative) that was caused by the last update to its position (which will be through player-inputted motion). *playerChangeY* is analagous.
   The *keyTyped()* event handler function is an unimplemented function which would update the player's position in accordance with user-input key strokes. It was replaced by an if-else block in the *draw()* implementation.
@@ -49,6 +54,8 @@ Program uses *p5.sound.js* library in order to work with sound effects.
 ##Analog TV Lab
 
 
+Description:
+
   *fps* is the frames per second for the in sketch TV simulation, not the frames per second of the canvas. *lastUpdateMillis* is set to a large negative number to approximate an integer minimum value constant.
   *mouseOverRectBtn()* tests whether the mouse is over the rectangler button in the sketch, and returns a boolean.
   *mouseOverCircBtn()* tests whether the mouse is over the circular button in the sketch, and returns a boolean.
@@ -62,8 +69,11 @@ Program uses *p5.sound.js* library in order to work with sound effects.
 ##Viewed From Above
 
 
+Description:
+
   In the *setup()* function implementation, the canvas is created to be 400 pixels wide and 400 pixels tall.
-  In the *draw()* function implementation, a black background is first created to be the space behind the foreground and the stroke color for the edges of shapes is set to be black. The *colorMode()* function call sets the mode for color based p5js functions to interpret their inputs as red, green, blue ordered triples, and to interpret the numbers on a scale from 0 being no color to 255 being full color. *arc()* is used to make the sphere curve of the planet below, centering in the middle of the screen where the planet is and arcing to form a semi-circle with its curved portion facing up where it will be viewable through the space station window. A beginShape()
+  In the *draw()* function implementation, a black background is first created to be the space behind the foreground and the stroke color for the edges of shapes is set to be black. The *colorMode()* function call sets the mode for color based p5js functions to interpret their inputs as red, green, blue ordered triples, and to interpret the numbers on a scale from 0 being no color to 255 being full color. *arc()* is used to make the sphere curve of the planet below, centering in the middle of the screen where the planet is and arcing to form a semi-circle with its curved portion facing up where it will be viewable through the space station window. *beginShape()* calls begin interpreting *vertex()* calls as vertices of polygonal portions of the planet graphic. The vertices are placed in the code to match a clockwise direction around the edge of shapes, as the p5js *vertex()* and *quad()* rely on this convention. The reddish ground portion of the planet is drawn first, then, after *fill()* interprets a string as a hexadecimal representation of a color, the orange portion of the planet's surface is drawn. *colorMode()* sets the mode for color data interpretation to hue-saturation-brightness. Finally, the blueish portion of the planet is drawn. After the polygonal surface portions are drawn, 4 quadrilaterals are drawn for the space station walls, again sticking to the clockwise convention in the input of vertices. Finally, 5 white stars are drawn using the *point()* function.
+  
 
 
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab02_currie/sketch.js)
