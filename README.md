@@ -12,7 +12,7 @@ My best work from MAGD150.
 
 ### Description:
 
-Program uses *p5.sound.js* library in order to work with sound effects.  
+Program uses the *p5.sound.js* library in order to work with sound effects.  
   
   
   
