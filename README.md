@@ -7,7 +7,7 @@ My best work from MAGD150.
 
 
 
-##Black Mirror
+## Black Mirror
 
 
 Description:
@@ -31,7 +31,7 @@ Program uses *p5.sound.js* library in order to work with sound effects.
 
 
 
-##Competing Flowers
+## Competing Flowers
 
 
 Description:
@@ -46,7 +46,7 @@ Description:
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab07_currie/sketch.js)
 
 
-##Rock Field
+## Rock Field
 
 
 Description:
@@ -63,7 +63,7 @@ Description:
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab06_currie/sketch.js)
 
 
-##Analog TV Lab
+## Analog TV Lab
 
 
 Description:
@@ -78,7 +78,7 @@ Description:
 [Source Code](https://github.com/ajcurrie-a11y/MAGD150_Lab_Assignments/tree/main/f20magd150lab05_currie/sketch.js)
 
 
-##Viewed From Above
+## Viewed From Above
 
 
 Description:
